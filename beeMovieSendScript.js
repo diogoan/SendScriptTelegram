@@ -1,6 +1,6 @@
 async function enviarScript(scriptText){
 	const lines = scriptText.split(/[\n\t]+/).map(line => line.trim()).filter(line => line);
-	main = document.querySelector("#main"),
+	main = document.querySelector("#Main"),
 	textarea = main.querySelector(`div[contenteditable="true"]`)
 	
 	if(!textarea) throw new Error("Não há uma conversa aberta")
@@ -13,7 +13,7 @@ async function enviarScript(scriptText){
 		textarea.dispatchEvent(new Event('change', {bubbles: true}));
 	
 		setTimeout(() => {
-			(main.querySelector(`[data-testid="send"]`) || main.querySelector(`[data-icon="send"]`)).click();
+			main.querySelector(`[title="Send Message"]`).click();
 		}, 100);
 		
 		if(lines.indexOf(line) !== lines.length - 1) await new Promise(resolve => setTimeout(resolve, 250));
