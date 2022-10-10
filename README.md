@@ -1,4 +1,4 @@
-# SendScriptWhatsApp
+# SendScriptTelegram
 
 Código para enviar o Script inteiro de Shrek ou Bee Movie para seus amigos ou grupos do Telegram
 
